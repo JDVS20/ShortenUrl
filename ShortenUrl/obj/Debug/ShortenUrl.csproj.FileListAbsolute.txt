@@ -40,3 +40,45 @@ c:\users\jose\source\repos\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.csprojReso
 c:\users\jose\source\repos\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.csproj.CoreCompileInputs.cache
 c:\users\jose\source\repos\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.dll
 c:\users\jose\source\repos\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.pdb
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\ApplicationInsights.config
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\ShortenUrl.dll.config
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\ShortenUrl.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\ShortenUrl.pdb
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Antlr3.Runtime.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.DependencyCollector.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.Web.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.WindowsServer.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.ApplicationInsights.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.Web.Infrastructure.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Newtonsoft.Json.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Helpers.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Mvc.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Optimization.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Razor.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.Deployment.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.Razor.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\WebGrease.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Helpers.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Mvc.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Optimization.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.Razor.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.Deployment.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\System.Web.WebPages.Razor.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Antlr3.Runtime.pdb
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Newtonsoft.Json.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.ApplicationInsights.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.DependencyCollector.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.WindowsServer.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\bin\Microsoft.AI.Web.xml
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.csprojResolveAssemblyReference.cache
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.csproj.CoreCompileInputs.cache
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.dll
+D:\Source\Test\Been Verified\ShortenUrl\ShortenUrl\obj\Debug\ShortenUrl.pdb

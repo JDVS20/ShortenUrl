@@ -7,18 +7,19 @@
 <h2>Welcome to Shorten URL</h2>
 
 <div>
-    <p> Insert the complete URL that you want to convert in short url</p>
+    <p> Insert the complete URL that you want to convert in short URL</p>
     <br />
     <form>
         <div class="form-group">
-            <label for="txtCompleteURL">URL</label>
+            <label for="txtCompleteURL" style="font-size:20px">URL</label>
             <input type="text" class="form-control" id="txtCompleteURL" placeholder="Paste the URL complete to convert it" required>
+
+            <button type="submit" id="btnGenerate" class="btn btn-primary">Generate</button>
         </div>
         <div class="form-group">
-            <label for="txtResult">Short URL</label>
+            <label for="txtResult" style="font-size:20px">Short URL</label>
             <input type="text" class="form-control" id="txtResult" readonly="readonly" placeholder="Result of URL ">
         </div>
-        <button type="submit" id="btnGenerate" class="btn btn-primary">Generate</button>
     </form>
 </div>
 
@@ -27,39 +28,23 @@
         <div class="card-header" id="headingOne">
             <h5 class="mb-0">
                 <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseHistory" aria-expanded="true" aria-controls="collapseHistory">
-                    <h4> One hundred URL more recently </h4>
+                    <h4> <b>Press to show - History URL </b></h4>
                 </button>
             </h5>
         </div>
 
         <div id="collapseHistory" class="collapse" aria-labelledby="headingOne" data-parent="#accordionHistory">
             
-            <table class="table">
-                <thead class="table-class">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Complete URL</th>
-                        <th scope="col">Short URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                    </tr>
-                </tbody>
-            </table>       
+            <jqx-grid theme="@ViewData["Theme"]" sortable="true" filterable="true" auto-height="true" width="850" source="Model">
+                <jqx-grid-columns>
+                    <jqx-grid-column column-group="name" datafield="idURL" width="100" text="Register"></jqx-grid-column>
+                    <jqx-grid-column column-group="name" datafield="originalURL" width="450" text="Originial URL"></jqx-grid-column>
+                    <jqx-grid-column column-group="name" datafield="shortURL" width="450" text="Short URL"></jqx-grid-column>
+                </jqx-grid-columns>
+                <jqx-grid-column-groups>
+                    <jqx-grid-column-group name="name" text="Name"></jqx-grid-column-group>
+                </jqx-grid-column-groups>
+            </jqx-grid>
 
         </div>
     </div>

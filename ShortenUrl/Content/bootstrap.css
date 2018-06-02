@@ -2011,6 +2011,7 @@ textarea.input-lg {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
+  width: 100px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;

@@ -17,7 +17,7 @@ warning 6002: The table/view 'ShortenURL.dbo.HistoryURL' does not have a primary
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OriginalUrl" Type="varchar(max)" Nullable="false" />
           <Property Name="ShortUrl" Type="varchar(max)" Nullable="false" />
-          <Property Name="DateCreated" Type="date" Nullable="false" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
         </EntityType>
         <Function Name="usp_InsertUrl" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Url" Type="varchar(max)" Mode="In" />
@@ -48,9 +48,9 @@ warning 6002: The table/view 'ShortenURL.dbo.HistoryURL' does not have a primary
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OriginalUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ShortUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
-        <EntityContainer Name="ShortenURLEntities" annotation:LazyLoadingEnabled="false">
+        <EntityContainer Name="ShortenURLEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="HistoryURL" EntityType="Self.HistoryURL" />
           <FunctionImport Name="usp_InsertUrl">
             <Parameter Name="Url" Mode="In" Type="String" />

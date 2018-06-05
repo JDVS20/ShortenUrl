@@ -1,73 +1,50 @@
 ﻿using ShortenUrl.BL;
-using System;
 using System.IO;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
+using System.Web;
 using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace ShortenUrl.Controllers
 {
     public class ShortUrlController : Controller
     {
         string apiKey = System.Configuration.ConfigurationManager.AppSettings["apiKey"];
-        
+        string login = System.Configuration.ConfigurationManager.AppSettings["login"];
 
         public ActionResult Index()
         {
-            return View();
-        }
+            //Load data in grid
+            SelectUrlBL.SelectMoreRecentURL();
 
-        public ActionResult UrlProcess(string urlComplete)
+            return View();
+        }        
+
+        public string UrlProcess(string urlComplete)
         {
-            string post = "{\"longUrl\": \"" + urlComplete + "\"}";
-            string shortUrl = urlComplete;
-            //HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.googleapis.com/urlshortener/v1/url?key=" + apiKey);
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.googleapis.com/urlshortener/v1/url?shortUrl=" + urlComplete);
+            var url = string.Format("http://api.bit.ly/shorten?format=json&version=2.0.1&longUrl={0}&login={1}&apiKey={2}", HttpUtility.UrlEncode(urlComplete), login, apiKey);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
 
             try
             {
-
-                // Insert URL in table 
-                //InsertUrlBL.InsertData(urlComplete, shortUrl);
-                InsertUrlBL.InsertData(urlComplete, "12545sad");
-
-
-                request.ServicePoint.Expect100Continue = false;
-                request.Method = "POST";
-                request.ContentLength = post.Length;
-                request.ContentType = "application/json";
-                request.Headers.Add("Cache-Control", "no-cache");
-
-                using (Stream requestStream = request.GetRequestStream())
+                WebResponse response = request.GetResponse();
+                using (Stream responseStream = response.GetResponseStream())
                 {
-                    byte[] postBuffer = Encoding.ASCII.GetBytes(post);
-                    requestStream.Write(postBuffer, 0, postBuffer.Length);
-                }
+                    StreamReader reader = new StreamReader(responseStream, Encoding.UTF8);
+                    JavaScriptSerializer js = new JavaScriptSerializer();
+                    dynamic jsonResponse = js.Deserialize<dynamic>(reader.ReadToEnd());
+                    string result = jsonResponse["results"][urlComplete]["shortUrl"];
 
-                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                {
-                    using (Stream responseStream = response.GetResponseStream())
-                    {
-                        using (StreamReader responseReader = new StreamReader(responseStream))
-                        {
-                            string json = responseReader.ReadToEnd();
-                            shortUrl = Regex.Match(json, @"""id"": ?""(?<id>.+)""").Groups["id"].Value;
-                        }
-                    }
+                    // Insert URL in History table 
+                    InsertUrlBL.InsertData(urlComplete, result);
+                    return result;
                 }
-
-                return null;
             }
-            catch (Exception ex)
+            catch (WebException ex)
             {
                 throw ex;
             }
         }
-
-
-        
-
-        
     }
 }

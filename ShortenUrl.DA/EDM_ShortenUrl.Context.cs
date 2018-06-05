@@ -20,7 +20,6 @@ namespace ShortenUrl.DA
         public ShortenURLEntities()
             : base("name=ShortenURLEntities")
         {
-            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -23,19 +23,19 @@
     </form>
 </div>
 
-<div class="accordion" id="accordionHistory">
-    <div class="card">
-        <div class="card-header" id="headingOne">
-            <h5 class="mb-0">
-                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseHistory" aria-expanded="true" aria-controls="collapseHistory">
-                    <h4> <b>Press to show - History URL </b></h4>
-                </button>
-            </h5>
-        </div>
+@*<div class="accordion" id="accordionHistory">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseHistory" aria-expanded="true" aria-controls="collapseHistory">
+                        <h4> <b>Press to show - History URL </b></h4>
+                    </button>
+                </h5>
+            </div>
 
-        <div id="collapseHistory" class="collapse" aria-labelledby="headingOne" data-parent="#accordionHistory">
+            <div id="collapseHistory" class="collapse" aria-labelledby="headingOne" data-parent="#accordionHistory">
 
-            <jqx-grid theme="@ViewData["Theme"]" sortable="true" filterable="true" auto-height="true" width="850" source="Model">
+                <jqx-grid theme="@ViewData["Theme"]" sortable="true" filterable="true" auto-height="true" width="850" source="Model">
                 <jqx-grid-columns>
                     <jqx-grid-column column-group="name" datafield="idURL" width="100" text="Register"></jqx-grid-column>
                     <jqx-grid-column column-group="name" datafield="originalURL" width="450" text="Originial URL"></jqx-grid-column>
@@ -46,8 +46,17 @@
                 </jqx-grid-column-groups>
             </jqx-grid>
 
+            <div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+                <div id="jqxgrid"></div>
+            </div>
+
+            </div>
         </div>
-    </div>
+    </div>*@
+
+<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+    <div id="jqxgrid"></div>
 </div>
+
 
 @Scripts.Render("~/Scripts/JavaScript/ShortUrl.js")

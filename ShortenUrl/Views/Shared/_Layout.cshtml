@@ -5,13 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shorten URL</title>
     @Styles.Render("~/Content/css")
+
+    @* JavaScripts Files *@
+    <script type="text/javascript" src="~/Scripts/JQuery/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/Toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/JQWidgets/jqxgrid.js"></script>
+
+
+
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxcore.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxangular.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxdata.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxbuttons.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxscrollbar.js")></script>
+
+
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxcheckbox.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxlistbox.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxdropdownlist.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.sort.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.pager.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.selection.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.edit.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.export.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.columnsresize.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxmenu.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxgrid.filter.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxwindow.js")></script>
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/jqxtabs.js")></script>
+
+    <script type="text/javascript" src=@Url.Content("~/Scripts/JQWidgets/Basejqx.js")></script>
+
+
+    @* CSS Files *@
+    <link href=@Url.Content("~/Content/JQWidgets/jqx.base.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/Content/JQWidgets/jqx.darkblue.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/Content/Toastr/toastr.min.css") rel="stylesheet" type="text/css" />
+    <link href=@Url.Content("~/Content/bootstrap.css") rel="stylesheet" type="text/css" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
 
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav" >
-                @*<li>@Html.ActionLink("Home", "Index", "ShortUrl")</li>*@
+            <ul class="nav navbar-nav">
             </ul>
         </div>
     </div>
@@ -25,6 +64,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -10,21 +10,41 @@ namespace ShortenUrl.BL
 
         public SelectUrlBL() { }
 
-        public List<string> Top100Url()
+        public static List<string> SelectMoreRecentURL()
         {
             try
             {
-                //List<ShortenUrl> total;
-
                 using(var ctx = new ShortenURLEntities())
                 {
                     var subquery = ctx.HistoryURL
-                        .Where(h => 
-                            h.Id > 0
-                        ).ToList();
+                        .OrderByDescending(h => h.DateCreated)
+                        .Take(100).ToList();
                 }
+               return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
-                return null;
+
+        public static IEnumerable<HistoryURL> UrlRecent()
+        {
+            try
+            {
+                using (var ctx = new ShortenURLEntities())
+                {
+                    List<HistoryURL> subquery = ctx.HistoryURL
+                        .OrderByDescending(h => h.DateCreated)
+                        .Take(100).ToList();
+
+                    if (subquery != null)
+                    {
+                        return subquery;
+                    }
+                    return null;
+                }
             }
             catch (Exception ex)
             {

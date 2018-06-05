@@ -14,10 +14,10 @@ namespace ShortenUrl.BL
             {
                 using (var ctx = new ShortenURLEntities())
                 {
-                    var param1 = new SqlParameter { ParameterName = "Url", Value = url };
-                    var param2 = new SqlParameter { ParameterName = "Short", Value = shortUrl };
+                    var param1 = new SqlParameter("@Url", url);
+                    var param2 = new SqlParameter (@"Short", shortUrl);
 
-                    var result = ctx.Database.SqlQuery<ShortenUrl>("exec usp_InsertUrl @Url @Short ", param1, param2);
+                    var result = ctx.Database.ExecuteSqlCommand("usp_InsertUrl @Url, @Short", param1, param2);
                 }
             }
             catch (Exception ex)

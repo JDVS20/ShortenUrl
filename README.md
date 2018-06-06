@@ -5,7 +5,8 @@ Description: The principal objective of this project is inserted or paste an URL
 Instructions of project:
 1. Download the all project.
 2. Build the all appliaction and install the nuget packages.
-4. Restore the backup database in SQL Server
+3. Execute (Script_ShortenUrlDatabase.sql) scritp to create all database and find the file in location /../ShortenURL.Database/Scripts/
+4. Change the connection string inside (web.config) to replace [data source=SERVERNAME;]
 
 Instructions to run application:
 1. Run the application.

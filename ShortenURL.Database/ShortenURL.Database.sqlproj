@@ -65,5 +65,6 @@
   <ItemGroup>
     <Build Include="dbo\Tables\HistoryURL.sql" />
     <Build Include="dbo\Stored Procedures\usp_InsertUrl.sql" />
+    <Build Include="Scripts\Script_ShortenUrlDatabase.sql" />
   </ItemGroup>
 </Project>

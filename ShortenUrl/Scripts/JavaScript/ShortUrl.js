@@ -1,4 +1,5 @@
-﻿function generateURL() {
+﻿
+function generateURL() {
     var valUrl = document.getElementById('txtCompleteURL').value;
 
     if (valUrl == "") {

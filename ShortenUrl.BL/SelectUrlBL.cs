@@ -7,27 +7,7 @@ namespace ShortenUrl.BL
 {
     public class SelectUrlBL
     {
-
-        public SelectUrlBL() { }
-
-        public static List<string> SelectMoreRecentURL()
-        {
-            try
-            {
-                using(var ctx = new ShortenURLEntities())
-                {
-                    var subquery = ctx.HistoryURL
-                        .OrderByDescending(h => h.DateCreated)
-                        .Take(100).ToList();
-                }
-               return null;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
+        ShortenURLEntities ctx = new ShortenURLEntities();    
 
         public static IEnumerable<HistoryURL> UrlRecent()
         {

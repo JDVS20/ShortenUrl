@@ -166,7 +166,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ShortUrlController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -599,14 +598,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\ShortUrl\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -631,6 +626,10 @@
     <ProjectReference Include="..\ShortenURL.Database\ShortenURL.Database.sqlproj">
       <Project>{42c7bc68-67a6-4fd2-bf76-d917c2b16e2e}</Project>
       <Name>ShortenURL.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShortenUrl.DA\ShortenUrl.DA.csproj">
+      <Project>{5293387d-40c0-4668-a1a4-71c31a4e93ed}</Project>
+      <Name>ShortenUrl.DA</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

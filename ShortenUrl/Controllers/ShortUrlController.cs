@@ -1,4 +1,5 @@
 ﻿using ShortenUrl.BL;
+using ShortenUrl.DA;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -15,8 +16,10 @@ namespace ShortenUrl.Controllers
 
         public ActionResult Index()
         {
-            //Load data in grid
-            SelectUrlBL.SelectMoreRecentURL();
+            //Load data in recent URL in grid
+            ShortenURLEntities ctx = new ShortenURLEntities();
+            var data = ctx.HistoryURL.SqlQuery("SELECT TOP 100 * FROM HistoryURL ORDER BY DateCreated DESC");
+            ViewBag.userdetails = data;
 
             return View();
         }        
